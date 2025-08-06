@@ -58,12 +58,13 @@ Then execute the commit with:
 !git add -A
 !git commit -m "$(cat <<'EOF'
 <generated commit message here>
-
-🤖 Generated with [Claude Code](https://claude.ai/code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>
 EOF
 )"
+
+**Important**: The commit message will be clean and professional, containing only:
+- The conventional commit format (type, scope, description)
+- Optional body and footer as needed
+- NO automated signatures or co-authorship attributions
 
 The commit will follow all Conventional Commits 1.0.0 rules:
 
