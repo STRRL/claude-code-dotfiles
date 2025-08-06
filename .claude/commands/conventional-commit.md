@@ -46,7 +46,9 @@ Based on the changes, I'll create a commit message following this structure:
 
 ## Creating the commit
 
-Based on the changes and any specific requirements in "$ARGUMENTS", I'll:
+**IMPORTANT**: This command will NEVER execute `git add`. It only creates commits from already staged changes.
+
+Based on the staged changes and any specific requirements in "$ARGUMENTS", I'll:
 
 1. Determine the appropriate commit type
 2. Identify if a scope is needed
@@ -55,13 +57,13 @@ Based on the changes and any specific requirements in "$ARGUMENTS", I'll:
 5. Include any necessary footers (BREAKING CHANGE, Refs, etc.)
 
 Then execute the commit with:
-!git add -A
 !git commit -m "$(cat <<'EOF'
-<generated commit message here>
+[generated commit message here]
 EOF
 )"
 
 **Important**: The commit message will be clean and professional, containing only:
+
 - The conventional commit format (type, scope, description)
 - Optional body and footer as needed
 - NO automated signatures or co-authorship attributions
