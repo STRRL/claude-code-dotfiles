@@ -59,14 +59,16 @@ Based on the staged changes and any specific requirements in "$ARGUMENTS", I'll:
 Then execute the commit with:
 !git commit -m "$(cat <<'EOF'
 [generated commit message here]
+
+Co-Authored-By: Claude <noreply@anthropic.com>
 EOF
 )"
 
-**Important**: The commit message will be clean and professional, containing only:
+**Important**: The commit message will be clean and professional, containing:
 
 - The conventional commit format (type, scope, description)
 - Optional body and footer as needed
-- NO automated signatures or co-authorship attributions
+- Co-Authored-By attribution for Claude
 
 The commit will follow all Conventional Commits 1.0.0 rules:
 
